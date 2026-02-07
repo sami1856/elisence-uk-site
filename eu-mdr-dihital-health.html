@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>EU MDR & Digital Health Safety – Elisence European Alignment</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="How Saami Salami Asl and the Elisence platform think about EU MDR, MDCG guidance and responsible European digital health design." />
+  <meta name="keywords" content="EU MDR, MDCG, European digital health, Saami Salami Asl, Elisence safety, health AI Europe" />
+  <link rel="canonical" href="https://elisence.co.uk/eu-mdr-digital-health.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="EU MDR & Digital Health Safety – Elisence European Alignment" />
+  <meta property="og:description" content="A calm overview of how Elisence approaches European MDR safety thinking, transparency and good practice for non-diagnostic health AI." />
+  <meta property="og:url" content="https://elisence.co.uk/eu-mdr-digital-health.html" />
+  <meta property="og:site_name" content="Elisence UK" />
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "EU MDR & Digital Health Safety – Elisence European Alignment",
+    "author": {
+      "@type": "Person",
+      "name": "Saami Salami Asl",
+      "alternateName": [
+        "Saami Salami",
+        "Sami Salami",
+        "Sami Salami Asl"
+      ],
+      "jobTitle": "Founder of Elisence",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Elisence"
+      }
+    },
+    "about": [
+      "EU MDR",
+      "MDCG guidance",
+      "European digital health",
+      "AI transparency"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://elisence.co.uk/eu-mdr-digital-health.html"
+    }
+  }
+  </script>
+
+  <style>
+    /* SAME DESIGN SYSTEM AS NHS/FDA/GCC */
+    :root {
+      --bg: #020617;
+      --card: #0b1220;
+      --border-soft: rgba(148, 163, 184, 0.15);
+      --accent: #38bdf8;
+      --text-main: #e5e7eb;
+      --text-soft: #9ca3af;
+      --text-strong: #f9fafb;
+      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.9);
+      --radius-full: 999px;
+      --transition-fast: 180ms ease-out;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      background: #020617;
+      color: var(--text-main);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page-shell { min-height: 100vh; display: flex; flex-direction: column; }
+
+    /* TOP BAR */
+    .top-bar {
+      position: sticky;
+      top: 0;
+      background: rgba(2, 6, 23, 0.8);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(15, 23, 42, 0.9);
+    }
+    .top-bar-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 12px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .brand-mark {
+      width: 30px;
+      height: 30px;
+      border-radius: 12px;
+      background: radial-gradient(circle at 30% 20%, #38bdf8, #0ea5e9 40%, #0369a1 100%);
+      box-shadow: 0 0 22px rgba(56,189,248,0.55);
+    }
+    .brand-text-main {
+      font-size: 15px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    .nav-links { display: flex; gap: 10px; }
+    .nav-link {
+      padding: 6px 11px;
+      border-radius: var(--radius-full);
+      text-decoration: none;
+      color: var(--text-soft);
+      transition: var(--transition-fast);
+    }
+    .nav-link:hover { background: #0b1120; color: var(--text-main); }
+
+    .nav-link-primary {
+      padding: 7px 14px;
+      border-radius: var(--radius-full);
+      background: radial-gradient(circle at 20% 0, #38bdf8, #0ea5e9 45%, #0369a1 100%);
+      color: #0b1120;
+      font-weight: 500;
+      text-decoration: none;
+      box-shadow: 0 0 22px rgba(56,189,248,0.55);
+      transition: var(--transition-fast);
+    }
+    .nav-link-primary:hover { transform: translateY(-1px); }
+
+    main { flex: 1; }
+
+    .content {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 32px 16px 40px;
+      display: grid;
+      grid-template-columns: 1.7fr 1.3fr;
+      gap: 20px;
+    }
+    @media(max-width:860px){
+      .content { grid-template-columns: 1fr; }
+    }
+
+    /* HERO CARD */
+    .hero-card {
+      background: radial-gradient(circle at top left,#0b1220 0,#020617 60%);
+      border-radius: 26px;
+      padding: 26px 22px 22px;
+      border: 1px solid rgba(148,163,184,0.25);
+      box-shadow: var(--shadow-soft);
+    }
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 11px 4px 4px;
+      border-radius: var(--radius-full);
+      background: rgba(15,23,42,0.9);
+      border: 1px solid rgba(56,189,248,0.35);
+      margin-bottom: 14px;
+    }
+    .hero-pill-dot {
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 30%, #e0f2fe, #38bdf8 45%, #0369a1 100%);
+      box-shadow: 0 0 20px rgba(56,189,248,0.7);
+    }
+    .hero-pill-text {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+    }
+    .hero-kicker {
+      font-size: 12px;
+      color: #60a5fa;
+      letter-spacing: 0.18em;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+    .hero-title {
+      font-size: clamp(26px,4vw,30px);
+      margin-bottom: 12px;
+      color: var(--text-strong);
+    }
+    .hero-subtitle {
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--text-soft);
+      margin-bottom: 18px;
+      max-width: 36rem;
+    }
+    .hero-meta { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 18px; }
+    .meta-chip {
+      font-size: 11px;
+      padding: 5px 10px;
+      border: 1px solid rgba(148,163,184,0.4);
+      border-radius: var(--radius-full);
+      background: rgba(15,23,42,0.85);
+    }
+
+    /* RIGHT COLUMN CARDS */
+    .grid-col { display: flex; flex-direction: column; gap: 14px; }
+    .card {
+      background: #020617;
+      border-radius: 20px;
+      padding: 16px;
+      border: 1px solid var(--border-soft);
+      box-shadow: var(--shadow-soft);
+    }
+    .card-header {
+      display: flex; justify-content: space-between; margin-bottom: 8px;
+    }
+    .card-title {
+      text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: 0.16em;
+      color: #cbd5f5;
+      font-weight: 600;
+    }
+    .card-badge {
+      font-size: 10px;
+      padding: 3px 8px;
+      background: rgba(15,23,42,0.95);
+      border-radius: var(--radius-full);
+      border: 1px solid rgba(56,189,248,0.4);
+      text-transform: uppercase;
+    }
+    .card-body { font-size: 13px; line-height: 1.7; color: var(--text-soft); }
+    .card-list { margin-top:8px; display:grid; gap:6px; }
+
+    .inline-link {
+      color: #7dd3fc;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(125,211,252,0.35);
+      padding-bottom: 1px;
+    }
+    .inline-link:hover {
+      color: #e0f2fe;
+      border-color: rgba(125,211,252,0.7);
+    }
+
+    footer {
+      border-top: 1px solid rgba(15,23,42,0.9);
+      background: #020617;
+    }
+    .footer-inner {
+      max-width:1100px;
+      margin:0 auto;
+      padding:16px;
+      font-size:11px;
+      color:var(--text-soft);
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page-shell">
+    <!-- TOP BAR -->
+    <header class="top-bar">
+      <div class="top-bar-inner">
+        <div class="brand">
+          <div class="brand-mark"></div>
+          <div>
+            <div class="brand-text-main">Elisence UK</div>
+            <div class="brand-text-sub">EU Digital Health</div>
+          </div>
+        </div>
+
+        <nav class="nav-links">
+          <a class="nav-link" href="/index.html">Home</a>
+          <a class="nav-link" href="/saami-salami.html">Saami Salami</a>
+          <a class="nav-link" href="/sami-salami.html">Sami Salami</a>
+          <a class="nav-link" href="/about-saami-salami.html">About the founder</a>
+          <a class="nav-link-primary" href="https://www.elisence.com" target="_blank">Main Platform</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+      <section class="content">
+
+        <!-- LEFT: HERO -->
+        <article class="hero-card">
+          <div class="hero-pill">
+            <span class="hero-pill-dot"></span>
+            <span class="hero-pill-text">EU · MDR · Safety</span>
+          </div>
+
+          <div class="hero-kicker">European Alignment · Saami Salami Asl</div>
+
+          <h1 class="hero-title">
+            How Elisence thinks about EU MDR safety & transparent digital health design
+          </h1>
+
+          <p class="hero-subtitle">
+            This page explains, in a simple and calm way, how <strong>Saami Salami Asl</strong> and the
+            <strong>Elisence</strong> platform think about European MDR/MDCG expectations—focusing on clarity,
+            transparency and safe boundaries for non-diagnostic digital health tools.
+          </p>
+
+          <div class="hero-meta">
+            <span class="meta-chip">EU MDR</span>
+            <span class="meta-chip">MDCG notes</span>
+            <span class="meta-chip">Transparency</span>
+            <span class="meta-chip">Non-diagnostic</span>
+          </div>
+
+          <p style="font-size:11px; color:var(--text-soft); margin-top:6px;">
+            This is not a regulatory claim. It simply describes design philosophy.
+          </p>
+        </article>
+
+        <!-- RIGHT COLUMN -->
+        <div class="grid-col">
+
+          <!-- Card 1 -->
+          <section class="card">
+            <div class="card-header">
+              <div class="card-title">What EU MDR focuses on</div>
+              <div class="card-badge">Overview</div>
+            </div>
+            <div class="card-body">
+              <p>
+                MDR emphasises patient safety, transparency, traceability and predictable behaviour. Even though
+                Elisence is not a medical device, the logic is shaped to reflect the spirit of these principles:
+              </p>
+              <div class="card-list">
+                <div><strong>Clarity:</strong> The system stays within clear boundaries.</div>
+                <div><strong>Traceability:</strong> Decisions and behaviour are inspectable.</div>
+                <div><strong>Safety thinking:</strong> Features are gated, not automatic.</div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Card 2 -->
+          <section class="card">
+            <div class="card-header">
+              <div class="card-title">MDCG guidance</div>
+              <div class="card-badge">EU</div>
+            </div>
+            <div class="card-body">
+              <p>MDCG documents highlight good practice for digital health and AI:</p>
+              <div class="card-list">
+                <div><strong>Explainability:</strong> Systems must be understandable.</div>
+                <div><strong>Human control:</strong> Humans remain decision makers.</div>
+                <div><strong>Data quality:</strong> Inputs and outputs must be coherent.</div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Card 3 -->
+          <section class="card">
+            <div class="card-header">
+              <div class="card-title">Where Elisence fits</div>
+              <div class="card-badge">Position</div>
+            </div>
+            <div class="card-body">
+              <p>
+                Elisence supports lifestyle, structure and health signals—not medical diagnosis. It sits comfortably
+                within non-diagnostic boundaries and focuses on:
+              </p>
+              <div class="card-list">
+                <div><strong>Insight:</strong> Helping families understand patterns.</div>
+                <div><strong>Structure:</strong> Helping clinicians discuss trends.</div>
+                <div><strong>Respect:</strong> Staying inside clear, safe limits.</div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Card 4 -->
+          <section class="card">
+            <div class="card-header">
+              <div class="card-title">Next steps</div>
+              <div class="card-badge">Info</div>
+            </div>
+            <div class="card-body">
+              <p>
+                Any future interaction with EU regulators would follow the formal MDR pathway through proper channels.
+                For now, Elisence remains an insight and structure platform—not a medical device.
+              </p>
+              <div class="card-list">
+                <div>
+                  <a class="inline-link" href="https://www.elisence.com/phases.html" target="_blank">
+                    View all Elisence phases
+                  </a>
+                </div>
+                <div>
+                  <a class="inline-link" href="https://www.elisence.com/founder-saami.html" target="_blank">
+                    Founder profile – Saami Salami Asl
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-inner">
+        <div>© Elisence UK – EU MDR alignment overview. Not medical advice.</div>
+        <div class="footer-links">
+          <a class="footer-link" href="https://www.elisence.com">Main platform</a>
+          <a class="footer-link" href="/index.html">UK home</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
