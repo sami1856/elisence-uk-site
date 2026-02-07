@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>FDA Digital Health Principles – Elisence Global Alignment</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="How Saami Salami Asl and the Elisence platform think about FDA digital health principles, AI transparency, safety, and responsible design." />
+  <meta name="keywords" content="FDA digital health, Saami Salami Asl, Elisence, US health AI, software as a medical device, good machine learning practices" />
+  <link rel="canonical" href="https://elisence.co.uk/fda-digital-health.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="FDA Digital Health Principles – Elisence Global Alignment" />
+  <meta property="og:description" content="A calm overview of how Elisence thinks about FDA-style transparency, responsibility and good practices for digital health and AI." />
+  <meta property="og:url" content="https://elisence.co.uk/fda-digital-health.html" />
+  <meta property="og:site_name" content="Elisence UK" />
+
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "FDA Digital Health Principles – Elisence Global Alignment",
+    "author": {
+      "@type": "Person",
+      "name": "Saami Salami Asl",
+      "alternateName": [
+        "Saami Salami",
+        "Sami Salami",
+        "Sami Salami Asl"
+      ],
+      "jobTitle": "Founder of Elisence",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Elisence"
+      }
+    },
+    "about": [
+      "FDA digital health",
+      "AI transparency",
+      "Good Machine Learning Practice",
+      "software safety"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://elisence.co.uk/fda-digital-health.html"
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #020617;
+      --bg-alt: #02091a;
+      --card: #0b1220;
+      --card-soft: #020617;
+      --border-soft: rgba(148, 163, 184, 0.15);
+      --accent: #38bdf8;
+      --accent-soft: rgba(56, 189, 248, 0.16);
+      --text-main: #e5e7eb;
+      --text-soft: #9ca3af;
+      --text-strong: #f9fafb;
+      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.9);
+      --radius-lg: 18px;
+      --radius-full: 999px;
+      --transition-fast: 180ms ease-out;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body { height: 100%; }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+        "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #020617 0, #020617 45%, #020617 100%);
+      color: var(--text-main);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page-shell { min-height: 100vh; display: flex; flex-direction: column; }
+
+    /* TOP BAR */
+    .top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(16px);
+      background: linear-gradient(to right, #020617d9, #020617e6);
+      border-bottom: 1px solid rgba(15, 23, 42, 0.9);
+    }
+
+    .top-bar-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-mark {
+      width: 30px;
+      height: 30px;
+      border-radius: 12px;
+      background: radial-gradient(circle at 30% 20%, #38bdf8, #0ea5e9 40%, #0369a1 100%);
+      box-shadow:
+        0 0 22px rgba(56, 189, 248, 0.55),
+        0 0 40px rgba(15, 23, 42, 0.9);
+    }
+
+    .brand-text-main {
+      font-weight: 600;
+      font-size: 15px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-strong);
+    }
+
+    .brand-text-sub {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: #38bdf8;
+      opacity: 0.85;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+    }
+
+    .nav-link {
+      border-radius: var(--radius-full);
+      padding: 6px 11px;
+      border: 1px solid transparent;
+      color: var(--text-soft);
+      text-decoration: none;
+      transition: var(--transition-fast);
+    }
+
+    .nav-link:hover {
+      border-color: rgba(148, 163, 184, 0.4);
+      color: var(--text-main);
+      background: rgba(15, 23, 42, 0.95);
+    }
+
+    .nav-link-primary {
+      border-radius: var(--radius-full);
+      padding: 7px 14px;
+      background: radial-gradient(circle at 25% 0, #38bdf8, #0ea5e9 45%, #0369a1 100%);
+      border: 1px solid rgba(56, 189, 248, 0.8);
+      color: #0b1120;
+      font-weight: 500;
+      text-decoration: none;
+      box-shadow:
+        0 0 22px rgba(56, 189, 248, 0.55),
+        0 18px 40px rgba(15, 23, 42, 0.95);
+      transition: var(--transition-fast);
+      white-space: nowrap;
+    }
+
+    .nav-link-primary:hover {
+      transform: translateY(-1px);
+      box-shadow:
+        0 0 26px rgba(56, 189, 248, 0.65),
+        0 22px 50px rgba(15, 23, 42, 1);
+    }
+
+    main { flex: 1; }
+
+    .content {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 32px 16px 40px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.7fr) minmax(0, 1.3fr);
+      gap: 20px;
+    }
+
+    @media (max-width: 860px) {
+      .content { grid-template-columns: minmax(0, 1fr); }
+    }
+
+    /* HERO + CARDS SAME STYLE AS NHS PAGE */
+    .hero-card {
+      background: radial-gradient(circle at top left, #0b1220 0, #020617 50%);
+      border-radius: 26px;
+      padding: 26px 22px 22px;
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border-radius: 999px;
+      padding: 4px 11px 4px 4px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      box-shadow: 0 0 18px rgba(56, 189, 248, 0.45);
+      margin-bottom: 14px;
+    }
+
+    .hero-pill-dot {
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 30%, #e0f2fe, #38bdf8 45%, #0369a1 100%);
+      box-shadow:
+        0 0 20px rgba(56, 189, 248, 0.7),
+        0 0 40px rgba(15, 23, 42, 1);
+    }
+
+    .hero-pill-text {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #e0f2fe;
+    }
+
+    .hero-kicker {
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #60a5fa;
+      margin-bottom: 10px;
+    }
+
+    .hero-title {
+      font-size: clamp(26px, 4vw, 30px);
+      line-height: 1.2;
+      color: var(--text-strong);
+      margin-bottom: 10px;
+    }
+
+    .hero-subtitle {
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--text-soft);
+      max-width: 36rem;
+      margin-bottom: 18px;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .meta-chip {
+      font-size: 11px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: rgba(15, 23, 42, 0.85);
+      color: #e5e7eb;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .btn-primary-hero {
+      border-radius: var(--radius-full);
+      padding: 9px 14px;
+      font-size: 13px;
+      font-weight: 500;
+      background: radial-gradient(circle at 20% 0, #38bdf8, #0ea5e9 40%, #0369a1 100%);
+      border: 1px solid rgba(56, 189, 248, 0.8);
+      color: #0b1120;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow:
+        0 0 18px rgba(56, 189, 248, 0.55),
+        0 18px 40px rgba(15, 23, 42, 0.95);
+      transition: var(--transition-fast);
+    }
+
+    .btn-primary-hero:hover {
+      transform: translateY(-1px);
+      box-shadow:
+        0 0 24px rgba(56, 189, 248, 0.7),
+        0 22px 52px rgba(15, 23, 42, 1);
+    }
+
+    .btn-ghost {
+      border-radius: var(--radius-full);
+      padding: 8px 14px;
+      font-size: 13px;
+      text-decoration: none;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      color: var(--text-main);
+      background: rgba(15, 23, 42, 0.9);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: var(--transition-fast);
+    }
+
+    .btn-ghost:hover {
+      background: rgba(15, 23, 42, 1);
+      border-color: rgba(148, 163, 184, 0.8);
+    }
+
+    .hero-footnote {
+      margin-top: 6px;
+      font-size: 11px;
+      color: var(--text-soft);
+    }
+
+    .grid-col { display: flex; flex-direction: column; gap: 14px; }
+
+    .card {
+      background: radial-gradient(circle at top left, #020617 0, #020617 45%, #020617 100%);
+      border-radius: 20px;
+      padding: 16px 16px 14px;
+      border: 1px solid var(--border-soft);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .card-title {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #cbd5f5;
+    }
+
+    .card-badge {
+      font-size: 10px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      background: rgba(15, 23, 42, 0.95);
+      color: #e0f2fe;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+
+    .card-body {
+      font-size: 13px;
+      line-height: 1.7;
+      color: var(--text-soft);
+    }
+
+    .card-list {
+      margin-top: 8px;
+      display: grid;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--text-soft);
+    }
+
+    .card-list strong {
+      color: var(--text-main);
+      font-weight: 500;
+    }
+
+    .inline-link {
+      color: #7dd3fc;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(125, 211, 252, 0.35);
+      padding-bottom: 1px;
+      transition: var(--transition-fast);
+    }
+
+    .inline-link:hover {
+      color: #e0f2fe;
+      border-color: rgba(125, 211, 252, 0.8);
+    }
+
+    footer {
+      border-top: 1px solid rgba(15, 23, 42, 0.9);
+      background: #020617;
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 16px;
+      font-size: 11px;
+      color: var(--text-soft);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 8px;
+      opacity: 0.9;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .footer-link {
+      color: var(--text-soft);
+      text-decoration: none;
+      border-bottom: 1px dotted rgba(148, 163, 184, 0.5);
+      padding-bottom: 1px;
+      transition: var(--transition-fast);
+    }
+
+    .footer-link:hover {
+      color: var(--text-main);
+      border-bottom-style: solid;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page-shell">
+    <!-- Top bar -->
+    <header class="top-bar">
+      <div class="top-bar-inner">
+        <div class="brand">
+          <div class="brand-mark"></div>
+          <div>
+            <div class="brand-text-main">Elisence UK</div>
+            <div class="brand-text-sub">Global Digital Health</div>
+          </div>
+        </div>
+        <nav class="nav-links">
+          <a class="nav-link" href="/index.html">Home</a>
+          <a class="nav-link" href="/saami-salami.html">Saami Salami</a>
+          <a class="nav-link" href="/sami-salami.html">Sami Salami</a>
+          <a class="nav-link" href="/about-saami-salami.html">About the founder</a>
+          <a class="nav-link-primary" href="https://www.elisence.com" target="_blank" rel="noopener">
+            Main Platform
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="content">
+        <!-- Left column -->
+        <article class="hero-card">
+          <div class="hero-pill">
+            <span class="hero-pill-dot"></span>
+            <span class="hero-pill-text">FDA · Digital Health · AI</span>
+          </div>
+
+          <div class="hero-kicker">Saami Salami Asl · Elisence</div>
+
+          <h1 class="hero-title">
+            How Elisence thinks about FDA digital health principles and AI safety
+          </h1>
+
+          <p class="hero-subtitle">
+            This page provides a calm, high-level view of how <strong>Saami Salami Asl</strong> and the
+            <strong>Elisence</strong> platform think about FDA-style principles for software safety, AI transparency,
+            and responsible digital health design. Nothing here is medical advice or a regulatory claim; it simply
+            explains how the platform is being shaped.
+          </p>
+
+          <div class="hero-meta">
+            <span class="meta-chip">Good Machine Learning Practice</span>
+            <span class="meta-chip">Transparency & safety thinking</span>
+            <span class="meta-chip">Non-diagnostic posture</span>
+          </div>
+
+          <div class="hero-actions">
+            <a class="btn-primary-hero" href="https://www.elisence.com/phases.html" target="_blank" rel="noopener">
+              Platform structure
+            </a>
+            <a class="btn-ghost" href="https://www.elisence.com/founder-saami.html" target="_blank" rel="noopener">
+              Founder profile
+            </a>
+          </div>
+
+          <p class="hero-footnote">
+            Purpose of this page: general transparency only. Not medical advice or regulatory positioning.
+          </p>
+        </article>
+
+        <!-- Right column -->
+        <div class="grid-col">
+          <!-- Card 1 -->
+          <section class="card">
+            <div class="card-header">
+              <h2 class="card-title">What the FDA focuses on</h2>
+              <span class="card-badge">Overview</span>
+            </div>
+            <div class="card-body">
+              <p>
+                The US Food & Drug Administration (FDA) is concerned with safety, effectiveness, transparency and
+                predictable behaviour of digital health tools. While Elisence is not a medical device, we believe in
+                following the spirit of FDA-style thinking:
+              </p>
+              <div class="card-list">
+                <div><strong>Clarity:</strong> Users understand what the system does and does not do.</div>
+                <div><strong>Transparency:</strong> Decisions remain explainable.</div>
+                <div><strong>Control:</strong> Features can be turned on/off through governance.</div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Card 2 -->
+          <section class="card">
+            <div class="card-header">
+              <h2 class="card-title">GMLP – Good Machine Learning Practice</h2>
+              <span class="card-badge">AI</span>
+            </div>
+            <div class="card-body">
+              <p>
+                The FDA and other global regulators highlight “Good Machine Learning Practice” (GMLP). These ideas
+                influence how Elisence is designed:
+              </p>
+              <div class="card-list">
+                <div><strong>Data clarity:</strong> Inputs must be understood, not mysterious.</div>
+                <div><strong>Explainability:</strong> Outputs must make sense, not behave randomly.</div>
+                <div><strong>Human-in-the-loop:</strong> Humans should always remain in control.</div>
+                <div><strong>Monitoring:</strong> Systems should be trackable and auditable.</div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Card 3 -->
+          <section class="card">
+            <div class="card-header">
+              <h2 class="card-title">Where Elisence sits</h2>
+              <span class="card-badge">Positioning</span>
+            </div>
+            <div class="card-body">
+              <p>
+                Elisence is built for <strong>support, insight and structure</strong>, not medical diagnosis. Its role is
+                to help families, clinicians and organisations talk about lifestyle and signals more clearly.
+              </p>
+              <div class="card-list">
+                <div><strong>Non-diagnostic:</strong> No medical decisions are made by the platform.</div>
+                <div><strong>Reviewable:</strong> Logic can be inspected by experts when needed.</div>
+                <div><strong>Bounded:</strong> Behaviours follow strict guardrails.</div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Card 4 -->
+          <section class="card">
+            <div class="card-header">
+              <h2 class="card-title">Next steps</h2>
+              <span class="card-badge">Info</span>
+            </div>
+            <div class="card-body">
+              <p>
+                As Elisence grows, elements of FDA-style governance—documentation, traceability, human oversight—will
+                remain central. Any future regulatory pathways would follow the correct formal processes.
+              </p>
+              <div class="card-list">
+                <div>
+                  <a class="inline-link" href="https://www.elisence.com/phases.html" target="_blank" rel="noopener">
+                    View all 17 phases
+                  </a>
+                </div>
+                <div>
+                  <a class="inline-link" href="https://www.elisence.com/founder-saami.html" target="_blank" rel="noopener">
+                    Read about the founder
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-inner">
+        <div>© Elisence UK microsite – FDA digital health & AI alignment note. No medical advice is provided.</div>
+        <div class="footer-links">
+          <a class="footer-link" href="https://www.elisence.com">Main platform</a>
+          <a class="footer-link" href="/index.html">UK home</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
