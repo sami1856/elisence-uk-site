@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>BBVP – Build, Back, Verify, Prove – Elisence Methodology</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="How Saami Salami Asl uses the BBVP approach – Build, Back, Verify, Prove – to develop Elisence with evidence, testing and traceable trust." />
+  <meta name="keywords" content="BBVP, Build Back Verify Prove, Saami Salami Asl, Elisence, evidence-based development, digital health testing" />
+  <link rel="canonical" href="https://elisence.co.uk/bbvp-methodology.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="BBVP – Build, Back, Verify, Prove – Elisence Methodology" />
+  <meta property="og:description" content="A clear overview of the BBVP method used by Saami Salami Asl to build Elisence step by step with tests, evidence packs and transparent proof." />
+  <meta property="og:url" content="https://elisence.co.uk/bbvp-methodology.html" />
+  <meta property="og:site_name" content="Elisence UK" />
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "BBVP – Build, Back, Verify, Prove – Elisence Methodology",
+    "author": {
+      "@type": "Person",
+      "name": "Saami Salami Asl",
+      "alternateName": [
+        "Saami Salami",
+        "Sami Salami",
+        "Sami Salami Asl"
+      ],
+      "jobTitle": "Founder of Elisence",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Elisence"
+      }
+    },
+    "about": [
+      "BBVP methodology",
+      "evidence-based development",
+      "digital health testing",
+      "regulatory-grade proof"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://elisence.co.uk/bbvp-methodology.html"
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #020617;
+      --card: #0b1220;
+      --border-soft: rgba(148, 163, 184, 0.15);
+      --accent: #38bdf8;
+      --text-main: #e5e7eb;
+      --text-soft: #9ca3af;
+      --text-strong: #f9fafb;
+      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.9);
+      --radius-full: 999px;
+      --transition-fast: 180ms ease-out;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+
+    body {
+      font-family: system-ui, -apple-system, "SF Pro Text", "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #020617 0, #020617 45%, #020617 100%);
+      color: var(--text-main);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page-shell { min-height: 100vh; display: flex; flex-direction: column; }
+
+    /* Top bar */
+    .top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(16px);
+      background: linear-gradient(to right, #020617d9, #020617e6);
+      border-bottom: 1px solid rgba(15, 23, 42, 0.9);
+    }
+    .top-bar-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 12px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .brand-mark {
+      width: 30px;
+      height: 30px;
+      border-radius: 12px;
+      background: radial-gradient(circle at 30% 20%, #38bdf8, #0ea5e9 40%, #0369a1 100%);
+      box-shadow:
+        0 0 22px rgba(56, 189, 248, 0.55),
+        0 0 40px rgba(15, 23, 42, 0.9);
+    }
+    .brand-text-main {
+      font-size: 15px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-strong);
+    }
+    .brand-text-sub {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: #38bdf8;
+      opacity: 0.85;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+    }
+    .nav-link {
+      border-radius: var(--radius-full);
+      padding: 6px 11px;
+      border: 1px solid transparent;
+      color: var(--text-soft);
+      text-decoration: none;
+      transition: var(--transition-fast);
+    }
+    .nav-link:hover {
+      border-color: rgba(148, 163, 184, 0.4);
+      color: var(--text-main);
+      background: rgba(15, 23, 42, 0.95);
+    }
+    .nav-link-primary {
+      border-radius: var(--radius-full);
+      padding: 7px 14px;
+      background: radial-gradient(circle at 25% 0, #38bdf8, #0ea5e9 45%, #0369a1 100%);
+      border: 1px solid rgba(56, 189, 248, 0.8);
+      color: #0b1120;
+      font-weight: 500;
+      text-decoration: none;
+      box-shadow:
+        0 0 22px rgba(56, 189, 248, 0.55),
+        0 18px 40px rgba(15, 23, 42, 0.95);
+      transition: var(--transition-fast);
+      white-space: nowrap;
+    }
+    .nav-link-primary:hover {
+      transform: translateY(-1px);
+      box-shadow:
+        0 0 26px rgba(56, 189, 248, 0.65),
+        0 22px 50px rgba(15, 23, 42, 1);
+    }
+
+    main { flex: 1; }
+
+    .content {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 32px 16px 40px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.7fr) minmax(0, 1.3fr);
+      gap: 20px;
+    }
+    @media (max-width: 860px) {
+      .content { grid-template-columns: minmax(0, 1fr); }
+    }
+
+    .hero-card {
+      background: radial-gradient(circle at top left, #0b1220 0, #020617 50%);
+      border-radius: 26px;
+      padding: 26px 22px 22px;
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      box-shadow: var(--shadow-soft);
+    }
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border-radius: var(--radius-full);
+      padding: 4px 11px 4px 4px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      box-shadow: 0 0 18px rgba(56, 189, 248, 0.45);
+      margin-bottom: 14px;
+    }
+    .hero-pill-dot {
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 30%, #e0f2fe, #38bdf8 45%, #0369a1 100%);
+      box-shadow:
+        0 0 20px rgba(56, 189, 248, 0.7),
+        0 0 40px rgba(15, 23, 42, 1);
+    }
+    .hero-pill-text {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #e0f2fe;
+    }
+    .hero-kicker {
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #60a5fa;
+      margin-bottom: 10px;
+    }
+    .hero-title {
+      font-size: clamp(26px, 4vw, 30px);
+      line-height: 1.2;
+      color: var(--text-strong);
+      margin-bottom: 12px;
+    }
+    .hero-subtitle {
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--text-soft);
+      max-width: 36rem;
+      margin-bottom: 18px;
+    }
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+    .meta-chip {
+      font-size: 11px;
+      padding: 5px 10px;
+      border-radius: var(--radius-full);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: rgba(15, 23, 42, 0.85);
+    }
+    .hero-footnote {
+      margin-top: 6px;
+      font-size: 11px;
+      color: var(--text-soft);
+    }
+
+    .grid-col {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .card {
+      background: radial-gradient(circle at top left, #020617 0, #020617 45%, #020617 100%);
+      border-radius: 20px;
+      padding: 16px;
+      border: 1px solid var(--border-soft);
+      box-shadow: var(--shadow-soft);
+    }
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    .card-title {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #cbd5f5;
+    }
+    .card-badge {
+      font-size: 10px;
+      padding: 3px 8px;
+      border-radius: var(--radius-full);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      background: rgba(15, 23, 42, 0.95);
+      color: #e0f2fe;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+    .card-body {
+      font-size: 13px;
+      line-height: 1.7;
+      color: var(--text-soft);
+    }
+    .card-list {
+      margin-top: 8px;
+      display: grid;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--text-soft);
+    }
+    .card-list strong {
+      color: var(--text-main);
+      font-weight: 500;
+    }
+
+    .inline-link {
+      color: #7dd3fc;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(125, 211, 252, 0.35);
+      padding-bottom: 1px;
+      transition: var(--transition-fast);
+    }
+    .inline-link:hover {
+      color: #e0f2fe;
+      border-color: rgba(125, 211, 252, 0.8);
+    }
+
+    footer {
+      border-top: 1px solid rgba(15, 23, 42, 0.9);
+      background: #020617;
+    }
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 16px;
+      font-size: 11px;
+      color: var(--text-soft);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 8px;
+      opacity: 0.9;
+    }
+    .footer-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .footer-link {
+      color: var(--text-soft);
+      text-decoration: none;
+      border-bottom: 1px dotted rgba(148, 163, 184, 0.5);
+      padding-bottom: 1px;
+      transition: var(--transition-fast);
+    }
+    .footer-link:hover {
+      color: var(--text-main);
+      border-bottom-style: solid;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page-shell">
+    <!-- Top bar -->
+    <header class="top-bar">
+      <div class="top-bar-inner">
+        <div class="brand">
+          <div class="brand-mark"></div>
+          <div>
+            <div class="brand-text-main">Elisence UK</div>
+            <div class="brand-text-sub">BBVP Methodology</div>
+          </div>
+        </div>
+        <nav class="nav-links">
+          <a class="nav-link" href="/index.html">Home</a>
+          <a class="nav-link" href="/saami-salami.html">Saami Salami</a>
+          <a class="nav-link" href="/sami-salami.html">Sami Salami</a>
+          <a class="nav-link" href="/about-saami-salami.html">About the founder</a>
+          <a class="nav-link-primary" href="https://www.elisence.com" target="_blank" rel="noopener">
+            Main Platform
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="content">
+        <!-- Left column: hero -->
+        <article class="hero-card">
+          <div class="hero-pill">
+            <span class="hero-pill-dot"></span>
+            <span class="hero-pill-text">BBVP · Evidence · Trust</span>
+          </div>
+
+          <div class="hero-kicker">Build · Back · Verify · Prove</div>
+
+          <h1 class="hero-title">
+            How Saami Salami Asl uses BBVP to build Elisence with evidence and proof
+          </h1>
+
+          <p class="hero-subtitle">
+            BBVP stands for <strong>Build, Back, Verify, Prove</strong>. It is the way <strong>Saami Salami Asl</strong>
+            develops Elisence: not just by writing code or documents, but by backing every step with tests, evidence
+            packs and clear proof of what works.
+          </p>
+
+          <div class="hero-meta">
+            <span class="meta-chip">Build with intention</span>
+            <span class="meta-chip">Back with tests</span>
+            <span class="meta-chip">Verify behaviour</span>
+            <span class="meta-chip">Prove with evidence</span>
+          </div>
+
+          <p class="hero-footnote">
+            This is not a legal framework. It is a practical, personal engineering discipline for digital health.
+          </p>
+        </article>
+
+        <!-- Right column: cards -->
+        <div class="grid-col">
+          <!-- Card 1: Build -->
+          <section class="card">
+            <div class="card-header">
+              <h2 class="card-title">1 · Build</h2>
+              <span class="card-badge">Design</span>
+            </div>
+            <div class="card-body">
+              <p>
+                In Elisence, “Build” means creating features, documents and flows with a clear purpose. Nothing is
+                random or rushed:
+              </p>
+              <div class="card-list">
+                <div><strong>Clear scope:</strong> Each feature has a defined role and boundary.</div>
+                <div><strong>Simple UX:</strong> Normal people should be able to use it calmly.</div>
+                <div><strong>Respect:</strong> Design respects families, clinicians and ministries equally.</div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Card 2: Back -->
+          <section class="card">
+            <div class="card-header">
+              <h2 class="card-title">2 · Back</h2>
+              <span class="card-badge">Support</span>
+            </div>
+            <div class="card-body">
+              <p>
+                “Back” means every important change is supported by something solid behind it:
+              </p>
+              <div class="card-list">
+                <div><strong>Notes & rationale:</strong> Why this change exists is written down.</div>
+                <div><strong>Standards:</strong> Links to NHS, EU, GCC or other guidance where relevant.</div>
+                <div><strong>Structure:</strong> Code and content follow repeatable patterns, not chaos.</div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Card 3: Verify -->
+          <section class="card">
+            <div class="card-header">
+              <h2 class="card-title">3 · Verify</h2>
+              <span class="card-badge">Testing</span>
+            </div>
+            <div class="card-body">
+              <p>
+                “Verify” is where ideas and code are actually checked. For Elisence, this includes:
+              </p>
+              <div class="card-list">
+                <div><strong>Technical tests:</strong> Does the code run? Do endpoints behave as expected?</div>
+                <div><strong>Safety checks:</strong> Does the system stay non-diagnostic and inside safe limits?</div>
+                <div><strong>Consistency:</strong> Do results match the standards they claim to follow?</div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Card 4: Prove -->
+          <section class="card">
+            <div class="card-header">
+              <h2 class="card-title">4 · Prove</h2>
+              <span class="card-badge">Evidence</span>
+            </div>
+            <div class="card-body">
+              <p>
+                “Prove” is where everything is recorded so it can be shown later to ministries, investors or auditors:
+              </p>
+              <div class="card-list">
+                <div><strong>Evidence packs:</strong> Bundles of tests, screenshots and logs kept together.</div>
+                <div><strong>Versioning:</strong> Clear dates and versions so people know what they are looking at.</div>
+                <div><strong>Honesty:</strong> If something is not finished, it is marked as “not done”, not hidden.</div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Card 5: Why this matters -->
+          <section class="card">
+            <div class="card-header">
+              <h2 class="card-title">Why BBVP matters in Elisence</h2>
+              <span class="card-badge">Trust</span>
+            </div>
+            <div class="card-body">
+              <p>
+                For a platform that aims to support ministries, hospitals and families, trust cannot be just words.
+                BBVP is the way <strong>Saami Salami Asl</strong> turns that into daily practice—step by step, with proof.
+              </p>
+              <div class="card-list">
+                <div>
+                  <a class="inline-link" href="https://www.elisence.com/phases.html" target="_blank" rel="noopener">
+                    Explore how BBVP shapes each phase of Elisence
+                  </a>
+                </div>
+                <div>
+                  <a class="inline-link" href="https://www.elisence.com/founder-saami.html" target="_blank" rel="noopener">
+                    Founder story – Saami Salami Asl
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <div>© Elisence UK microsite – BBVP methodology overview for Elisence.</div>
+        <div class="footer-links">
+          <a class="footer-link" href="https://www.elisence.com" target="_blank" rel="noopener">Main platform</a>
+          <a class="footer-link" href="/index.html">UK home</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
