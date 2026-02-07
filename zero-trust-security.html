@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Zero-Trust Security & Privacy by Design – Elisence Approach</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="How Saami Salami Asl and the Elisence platform think about Zero-Trust security, privacy by design and protecting families, clinicians and ministries of health." />
+  <meta name="keywords" content="Zero-Trust, security, privacy by design, Saami Salami Asl, Elisence, health data protection" />
+  <link rel="canonical" href="https://elisence.co.uk/zero-trust-security.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Zero-Trust Security & Privacy by Design – Elisence Approach" />
+  <meta property="og:description" content="A calm overview of how Elisence is being designed around Zero-Trust, strong access control and privacy by design." />
+  <meta property="og:url" content="https://elisence.co.uk/zero-trust-security.html" />
+  <meta property="og:site_name" content="Elisence UK" />
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Zero-Trust Security & Privacy by Design – Elisence Approach",
+    "author": {
+      "@type": "Person",
+      "name": "Saami Salami Asl",
+      "alternateName": [
+        "Saami Salami",
+        "Sami Salami",
+        "Sami Salami Asl"
+      ],
+      "jobTitle": "Founder of Elisence",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Elisence"
+      }
+    },
+    "about": [
+      "Zero-Trust security",
+      "privacy by design",
+      "health data protection",
+      "digital health AI"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://elisence.co.uk/zero-trust-security.html"
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #020617;
+      --card: #0b1220;
+      --border-soft: rgba(148, 163, 184, 0.15);
+      --accent: #38bdf8;
+      --text-main: #e5e7eb;
+      --text-soft: #9ca3af;
+      --text-strong: #f9fafb;
+      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.9);
+      --radius-full: 999px;
+      --transition-fast: 180ms ease-out;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+
+    body {
+      font-family: system-ui, -apple-system, "SF Pro Text", "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #020617 0, #020617 45%, #020617 100%);
+      color: var(--text-main);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page-shell { min-height: 100vh; display: flex; flex-direction: column; }
+
+    /* Top bar */
+    .top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(16px);
+      background: linear-gradient(to right, #020617d9, #020617e6);
+      border-bottom: 1px solid rgba(15, 23, 42, 0.9);
+    }
+    .top-bar-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 12px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .brand-mark {
+      width: 30px;
+      height: 30px;
+      border-radius: 12px;
+      background: radial-gradient(circle at 30% 20%, #38bdf8, #0ea5e9 40%, #0369a1 100%);
+      box-shadow:
+        0 0 22px rgba(56, 189, 248, 0.55),
+        0 0 40px rgba(15, 23, 42, 0.9);
+    }
+    .brand-text-main {
+      font-size: 15px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-strong);
+    }
+    .brand-text-sub {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: #38bdf8;
+      opacity: 0.85;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+    }
+    .nav-link {
+      border-radius: var(--radius-full);
+      padding: 6px 11px;
+      border: 1px solid transparent;
+      color: var(--text-soft);
+      text-decoration: none;
+      transition: var(--transition-fast);
+    }
+    .nav-link:hover {
+      border-color: rgba(148, 163, 184, 0.4);
+      color: var(--text-main);
+      background: rgba(15, 23, 42, 0.95);
+    }
+    .nav-link-primary {
+      border-radius: var(--radius-full);
+      padding: 7px 14px;
+      background: radial-gradient(circle at 25% 0, #38bdf8, #0ea5e9 45%, #0369a1 100%);
+      border: 1px solid rgba(56, 189, 248, 0.8);
+      color: #0b1120;
+      font-weight: 500;
+      text-decoration: none;
+      box-shadow:
+        0 0 22px rgba(56, 189, 248, 0.55),
+        0 18px 40px rgba(15, 23, 42, 0.95);
+      transition: var(--transition-fast);
+      white-space: nowrap;
+    }
+    .nav-link-primary:hover {
+      transform: translateY(-1px);
+      box-shadow:
+        0 0 26px rgba(56, 189, 248, 0.65),
+        0 22px 50px rgba(15, 23, 42, 1);
+    }
+
+    main { flex: 1; }
+
+    .content {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 32px 16px 40px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.7fr) minmax(0, 1.3fr);
+      gap: 20px;
+    }
+    @media (max-width: 860px) {
+      .content { grid-template-columns: minmax(0, 1fr); }
+    }
+
+    .hero-card {
+      background: radial-gradient(circle at top left, #0b1220 0, #020617 50%);
+      border-radius: 26px;
+      padding: 26px 22px 22px;
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      box-shadow: var(--shadow-soft);
+    }
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border-radius: var(--radius-full);
+      padding: 4px 11px 4px 4px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      box-shadow: 0 0 18px rgba(56, 189, 248, 0.45);
+      margin-bottom: 14px;
+    }
+    .hero-pill-dot {
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 30%, #e0f2fe, #38bdf8 45%, #0369a1 100%);
+      box-shadow:
+        0 0 20px rgba(56, 189, 248, 0.7),
+        0 0 40px rgba(15, 23, 42, 1);
+    }
+    .hero-pill-text {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #e0f2fe;
+    }
+    .hero-kicker {
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #60a5fa;
+      margin-bottom: 10px;
+    }
+    .hero-title {
+      font-size: clamp(26px, 4vw, 30px);
+      line-height: 1.2;
+      color: var(--text-strong);
+      margin-bottom: 12px;
+    }
+    .hero-subtitle {
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--text-soft);
+      max-width: 36rem;
+      margin-bottom: 18px;
+    }
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+    .meta-chip {
+      font-size: 11px;
+      padding: 5px 10px;
+      border-radius: var(--radius-full);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: rgba(15, 23, 42, 0.85);
+    }
+    .hero-footnote {
+      margin-top: 6px;
+      font-size: 11px;
+      color: var(--text-soft);
+    }
+
+    .grid-col {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .card {
+      background: radial-gradient(circle at top left, #020617 0, #020617 45%, #020617 100%);
+      border-radius: 20px;
+      padding: 16px;
+      border: 1px solid var(--border-soft);
+      box-shadow: var(--shadow-soft);
+    }
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    .card-title {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #cbd5f5;
+    }
+    .card-badge {
+      font-size: 10px;
+      padding: 3px 8px;
+      border-radius: var(--radius-full);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      background: rgba(15, 23, 42, 0.95);
+      color: #e0f2fe;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+    .card-body {
+      font-size: 13px;
+      line-height: 1.7;
+      color: var(--text-soft);
+    }
+    .card-list {
+      margin-top: 8px;
+      display: grid;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--text-soft);
+    }
+    .card-list strong {
+      color: var(--text-main);
+      font-weight: 500;
+    }
+
+    .inline-link {
+      color: #7dd3fc;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(125, 211, 252, 0.35);
+      padding-bottom: 1px;
+      transition: var(--transition-fast);
+    }
+    .inline-link:hover {
+      color: #e0f2fe;
+      border-color: rgba(125, 211, 252, 0.8);
+    }
+
+    footer {
+      border-top: 1px solid rgba(15, 23, 42, 0.9);
+      background: #020617;
+    }
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 16px;
+      font-size: 11px;
+      color: var(--text-soft);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 8px;
+      opacity: 0.9;
+    }
+    .footer-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .footer-link {
+      color: var(--text-soft);
+      text-decoration: none;
+      border-bottom: 1px dotted rgba(148, 163, 184, 0.5);
+      padding-bottom: 1px;
+      transition: var(--transition-fast);
+    }
+    .footer-link:hover {
+      color: var(--text-main);
+      border-bottom-style: solid;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page-shell">
+    <!-- Top bar -->
+    <header class="top-bar">
+      <div class="top-bar-inner">
+        <div class="brand">
+          <div class="brand-mark"></div>
+          <div>
+            <div class="brand-text-main">Elisence UK</div>
+            <div class="brand-text-sub">Security & Privacy</div>
+          </div>
+        </div>
+        <nav class="nav-links">
+          <a class="nav-link" href="/index.html">Home</a>
+          <a class="nav-link" href="/saami-salami.html">Saami Salami</a>
+          <a class="nav-link" href="/sami-salami.html">Sami Salami</a>
+          <a class="nav-link" href="/about-saami-salami.html">About the founder</a>
+          <a class="nav-link-primary" href="https://www.elisence.com" target="_blank" rel="noopener">
+            Main Platform
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="content">
+        <!-- Left: hero -->
+        <article class="hero-card">
+          <div class="hero-pill">
+            <span class="hero-pill-dot"></span>
+            <span class="hero-pill-text">Zero-Trust · Security · Privacy</span>
+          </div>
+
+          <div class="hero-kicker">Saami Salami Asl · Elisence</div>
+
+          <h1 class="hero-title">
+            How Elisence thinks about Zero-Trust security and privacy by design
+          </h1>
+
+          <p class="hero-subtitle">
+            This page explains how <strong>Saami Salami Asl</strong> and the <strong>Elisence</strong> platform think
+            about security: assume nothing is automatically “safe”, verify every access, and keep families’, clinicians’
+            and ministries’ data protected by design.
+          </p>
+
+          <div class="hero-meta">
+            <span class="meta-chip">Zero-Trust mindset</span>
+            <span class="meta-chip">Least privilege access</span>
+            <span class="meta-chip">Traceable behaviour</span>
+          </div>
+
+          <p class="hero-footnote">
+            This is not a full technical specification; it’s a clear, non-technical overview of the security philosophy
+            behind Elisence.
+          </p>
+        </article>
+
+        <!-- Right: cards -->
+        <div class="grid-col">
+          <!-- Card 1: What is Zero-Trust -->
+          <section class="card">
+            <div class="card-header">
+              <h2 class="card-title">What Zero-Trust really means</h2>
+              <span class="card-badge">Concept</span>
+            </div>
+            <div class="card-body">
+              <p>
+                Zero-Trust security is the opposite of “everyone inside the network is trusted”. Instead, the system
+                assumes nothing and nobody is automatically safe:
+              </p>
+              <div class="card-list">
+                <div><strong>Verify every access:</strong> Every request is checked, not just the first login.</div>
+                <div><strong>Limit permissions:</strong> Each role only gets what it truly needs.</div>
+                <div><strong>Watch behaviour:</strong> Actions are logged so unusual patterns can be seen.</div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Card 2: How this maps to health -->
+          <section class="card">
+            <div class="card-header">
+              <h2 class="card-title">How this matters in health</h2>
+              <span class="card-badge">Context</span>
+            </div>
+            <div class="card-body">
+              <p>
+                Health-related information is sensitive. A Zero-Trust mindset is especially important here because:
+              </p>
+              <div class="card-list">
+                <div><strong>Families:</strong> Need confidence that their data is not casually shared.</div>
+                <div><strong>Clinicians:</strong> Need systems that respect professional duty of confidentiality.</div>
+                <div><strong>Ministries:</strong> Need platforms that can prove who did what, and when.</div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Card 3: Practical steps in Elisence -->
+          <section class="card">
+            <div class="card-header">
+              <h2 class="card-title">Practical steps inside Elisence</h2>
+              <span class="card-badge">Approach</span>
+            </div>
+            <div class="card-body">
+              <p>
+                In practical terms, the Elisence design is being shaped around a few simple rules:
+              </p>
+              <div class="card-list">
+                <div><strong>Least privilege:</strong> Users and organisations only see what their role allows.</div>
+                <div><strong>Separation:</strong> Sensitive data, analytics and public content are separated.</div>
+                <div><strong>Audit trails:</strong> Important actions can be traced if questions arise.</div>
+                <div><strong>No dark advertising:</strong> The platform is not built around selling people’s data.</div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Card 4: Next steps -->
+          <section class="card">
+            <div class="card-header">
+              <h2 class="card-title">Next steps & where to read more</h2>
+              <span class="card-badge">Info</span>
+            </div>
+            <div class="card-body">
+              <p>
+                As Elisence continues to grow, security and privacy by design remain non-negotiable. This aligns with
+                NHS thinking, EU expectations, GCC data sovereignty and global digital health standards.
+              </p>
+              <div class="card-list">
+                <div>
+                  <a class="inline-link" href="https://www.elisence.com/phases.html" target="_blank" rel="noopener">
+                    Explore the Elisence phases
+                  </a>
+                </div>
+                <div>
+                  <a class="inline-link" href="https://www.elisence.com/story.html" target="_blank" rel="noopener">
+                    Read the Elisence story
+                  </a>
+                </div>
+                <div>
+                  <a class="inline-link" href="https://www.elisence.com/founder-saami.html" target="_blank" rel="noopener">
+                    Founder – Saami Salami Asl
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <div>© Elisence UK microsite – Zero-Trust security & privacy by design overview.</div>
+        <div class="footer-links">
+          <a class="footer-link" href="https://www.elisence.com" target="_blank" rel="noopener">Main platform</a>
+          <a class="footer-link" href="/index.html">UK home</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
