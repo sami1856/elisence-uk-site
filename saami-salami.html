@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Saami Salami – UK Digital Health Founder | Elisence</title>
+  <meta name="description" content="Saami Salami is the UK-based digital health founder behind Elisence, a sovereign health and AI platform focused on prevention, ethics and real-world impact." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Saami Salami Asl" />
+  <meta name="keywords" content="Saami Salami, Sami Salami, Saami Salami Asl, Elisence, UK digital health, AI health platform" />
+
+  <link rel="canonical" href="https://www.elisence.com/founder-saami.html" />
+
+  <style>
+    :root {
+      --bg: #050816;
+      --bg-soft: #0b1020;
+      --card: #10172a;
+      --accent: #37bdf8;
+      --accent-soft: rgba(55, 189, 248, 0.25);
+      --text: #e5e7eb;
+      --text-soft: #9ca3af;
+      --border-subtle: rgba(148, 163, 184, 0.35);
+      --radius-lg: 18px;
+      --shadow-soft: 0 18px 50px rgba(15, 23, 42, 0.85);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+        "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #0f172a 0, #020617 55%, #000 100%);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .shell {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      padding: 18px 20px;
+      border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.65));
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    .top-bar {
+      max-width: 1040px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-mark {
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background:
+        radial-gradient(circle at 30% 0%, rgba(56, 189, 248, 0.35), transparent 55%),
+        radial-gradient(circle at 70% 120%, rgba(129, 140, 248, 0.38), transparent 60%),
+        #020617;
+      box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.9),
+        0 12px 30px rgba(15, 23, 42, 0.9);
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-title {
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: #e5e7eb;
+    }
+
+    .brand-sub {
+      font-size: 11px;
+      color: var(--text-soft);
+    }
+
+    nav {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-link {
+      font-size: 12px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      color: var(--text-soft);
+      text-decoration: none;
+      background: transparent;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-link:hover {
+      border-color: rgba(148, 163, 184, 0.6);
+      background: rgba(15, 23, 42, 0.8);
+    }
+
+    .nav-link.primary {
+      border-color: rgba(56, 189, 248, 0.75);
+      background: radial-gradient(circle at 0 0, rgba(56, 189, 248, 0.18), transparent 55%),
+        rgba(15, 23, 42, 0.95);
+      color: #e5f5ff;
+      box-shadow: 0 0 20px rgba(56, 189, 248, 0.38);
+    }
+
+    main {
+      flex: 1;
+      padding: 30px 18px 48px;
+    }
+
+    .page {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--accent);
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      background: rgba(15, 23, 42, 0.9);
+      box-shadow: 0 0 18px rgba(37, 99, 235, 0.4);
+      margin-bottom: 14px;
+    }
+
+    .title {
+      font-size: clamp(26px, 3vw, 30px);
+      font-weight: 650;
+      letter-spacing: 0.02em;
+      margin: 0 0 8px;
+      color: #f9fafb;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      max-width: 680px;
+      color: var(--text-soft);
+      margin-bottom: 26px;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, 2.2fr) minmax(0, 1.4fr);
+      gap: 24px;
+    }
+
+    @media (max-width: 830px) {
+      .layout {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .card {
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-subtle);
+      background:
+        radial-gradient(circle at top, rgba(56, 189, 248, 0.16), transparent 55%),
+        radial-gradient(circle at bottom, rgba(15, 23, 42, 0.95), #020617);
+      box-shadow: var(--shadow-soft);
+      padding: 20px 20px 18px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background:
+        radial-gradient(circle at top, rgba(56, 189, 248, 0.12), transparent 60%),
+        radial-gradient(circle at bottom, rgba(129, 140, 248, 0.12), transparent 60%);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    .card-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .card h2 {
+      margin: 0 0 12px;
+      font-size: 17px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: #e5e7eb;
+    }
+
+    .card p {
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--text-soft);
+      margin: 0 0 14px;
+    }
+
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .chip {
+      font-size: 11px;
+      padding: 4px 9px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      color: var(--text-soft);
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    .stat-block {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .stat {
+      border-radius: 12px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      background: radial-gradient(circle at top, rgba(56, 189, 248, 0.1), transparent 55%),
+        rgba(15, 23, 42, 0.95);
+      padding: 10px 12px;
+    }
+
+    .stat-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: rgba(148, 163, 184, 0.9);
+      margin-bottom: 4px;
+    }
+
+    .stat-value {
+      font-size: 13px;
+      color: #e5e7eb;
+      font-weight: 500;
+    }
+
+    footer {
+      border-top: 1px solid rgba(148, 163, 184, 0.25);
+      padding: 14px 18px 18px;
+      background: radial-gradient(circle at top, rgba(15, 23, 42, 0.95), #020617);
+    }
+
+    .footer-inner {
+      max-width: 1040px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+      font-size: 11px;
+      color: var(--text-soft);
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Saami Salami Asl",
+    "alternateName": [
+      "Saami Salami",
+      "Sami Salami",
+      "Sami Salami Asl"
+    ],
+    "jobTitle": "Founder & CEO, Elisence",
+    "url": "https://www.elisence.com/founder-saami.html",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "Elisence",
+      "url": "https://www.elisence.com"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <div class="top-bar">
+        <div class="brand">
+          <div class="brand-mark">E</div>
+          <div class="brand-text">
+            <div class="brand-title">Elisence · UK Microsite</div>
+            <div class="brand-sub">Sovereign digital health & human-centred AI</div>
+          </div>
+        </div>
+        <nav>
+          <a class="nav-link" href="index.html">UK Home</a>
+          <a class="nav-link" href="about-saami-salami.html">About the founder</a>
+          <a class="nav-link primary" href="https://www.elisence.com">Go to main platform</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="page">
+        <div class="pill">Founder profile · United Kingdom</div>
+        <h1 class="title">Saami Salami – building sovereign, human digital health</h1>
+        <p class="subtitle">
+          Saami Salami is the founder of <strong>Elisence</strong>, a digital health and AI
+          platform focused on prevention, real-world evidence and human dignity. From the UK,
+          he is designing Elisence as a long-term, sovereign health infrastructure that
+          ministries, clinicians and families can trust.
+        </p>
+
+        <div class="layout">
+          <section class="card">
+            <div class="card-inner">
+              <h2>Who is Saami?</h2>
+              <p>
+                Saami Salami is a UK-based founder working at the intersection of
+                digital health, data ethics and everyday human life. His background
+                combines engineering, law and hands-on work with patients, carers and
+                clinical teams. Elisence grew out of years of lived experience with
+                long waiting lists, fragmented records and the lack of a calm, trusted
+                companion for ordinary people and their doctors.
+              </p>
+              <p>
+                In day-to-day terms, his work is simple to describe and hard to execute:
+                build a platform that <em>never replaces doctors</em>, never turns people
+                into ad-targets, and never forgets that behind every metric there is a
+                real human being with family, history and emotions.
+              </p>
+              <p>
+                Some people write his name as <strong>Sami Salami</strong>, especially in
+                informal contexts. Wherever it appears, it refers to the same person:
+                the founder of Elisence and the author of its long-term vision for
+                scientific, compassionate health technology.
+              </p>
+
+              <div class="chip-row">
+                <span class="chip">Digital health founder</span>
+                <span class="chip">Human-centred AI</span>
+                <span class="chip">Prevention &amp; real-world data</span>
+                <span class="chip">UK &amp; global collaboration</span>
+              </div>
+            </div>
+          </section>
+
+          <aside class="card">
+            <div class="card-inner">
+              <h2>Focus areas</h2>
+              <p>
+                Elisence is being built step-by-step as a multi-phase ecosystem:
+                metabolic &amp; GLP-1 intelligence, women+ health, mental health and
+                sleep, children &amp; families, nutrition, risk engines and evidence
+                packs for ministries and regulators.
+              </p>
+              <div class="stat-block">
+                <div class="stat">
+                  <div class="stat-label">Core role</div>
+                  <div class="stat-value">Founder &amp; Architect of Elisence</div>
+                </div>
+                <div class="stat">
+                  <div class="stat-label">Base</div>
+                  <div class="stat-value">United Kingdom · Global remit</div>
+                </div>
+                <div class="stat">
+                  <div class="stat-label">Focus</div>
+                  <div class="stat-value">Prevention, dignity, compliance-grade design</div>
+                </div>
+              </div>
+              <p>
+                For a deeper, technical and legal overview of his work,
+                you can read the full founder profile on the main platform:
+                <a href="https://www.elisence.com/founder-saami.html"
+                  >elisence.com/founder-saami.html</a
+                >.
+              </p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <span>© Elisence · UK microsite for informational and reputational context only.</span>
+        <span>Nothing here is medical advice or a clinical decision support tool.</span>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
