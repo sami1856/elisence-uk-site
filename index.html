@@ -305,6 +305,72 @@
       text-decoration: underline;
     }
 
+    /* Articles grid with 11 cards */
+    .articles-section {
+      margin-top: 28px;
+    }
+
+    .articles-title {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+
+    .articles-sub {
+      font-size: 0.9rem;
+      color: var(--text-soft);
+      margin-bottom: 16px;
+    }
+
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+
+    .article-card {
+      border-radius: 14px;
+      border: 1px solid var(--border-soft);
+      background:
+        radial-gradient(circle at top left, rgba(56, 189, 248, 0.16), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(30, 64, 175, 0.4), transparent 60%),
+        var(--bg-card);
+      padding: 14px 14px 13px;
+      box-shadow:
+        0 0 0 1px rgba(15, 23, 42, 0.96),
+        0 18px 40px rgba(15, 23, 42, 1),
+        0 0 20px rgba(37, 99, 235, 0.5);
+    }
+
+    .article-eyebrow {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .article-title {
+      font-size: 0.98rem;
+      font-weight: 600;
+      margin: 0 0 6px;
+    }
+
+    .article-text {
+      font-size: 0.88rem;
+      color: var(--text-soft);
+      margin: 0 0 8px;
+    }
+
+    .article-link {
+      font-size: 0.85rem;
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .article-link:hover {
+      text-decoration: underline;
+    }
+
     footer {
       border-top: 1px solid rgba(15, 23, 42, 0.9);
       padding: 16px 18px 22px;
@@ -452,6 +518,130 @@
             This page does not provide medical advice, diagnosis or prescriptions. It only points to official Elisence
             documentation and public, non-diagnostic information.
           </small>
+        </div>
+      </section>
+
+      <!-- NEW SECTION: all 11 UK evidence pages in matching blue cards -->
+      <section class="articles-section">
+        <h2 class="articles-title">UK evidence & articles for Saami / Sami Salami Asl</h2>
+        <p class="articles-sub">
+          The following pages sit under this UK microsite and give regulators, courts and investigators a stable,
+          official narrative around the founder and the Elisence platform.
+        </p>
+
+        <div class="articles-grid">
+          <!-- Founder overview (UK angle) -->
+          <article class="article-card">
+            <div class="article-eyebrow">Founder • UK context</div>
+            <h3 class="article-title">About Saami Salami – UK overview</h3>
+            <p class="article-text">
+              Calm, structured biography of Saami / Sami Salami Asl, written for UK readers who need a neutral,
+              professional reference.
+            </p>
+            <a class="article-link" href="about-saami-salami.html">Open about-saami-salami.html →</a>
+          </article>
+
+          <!-- Saami spelling -->
+          <article class="article-card">
+            <div class="article-eyebrow">Name mapping</div>
+            <h3 class="article-title">“Saami Salami” – founder reference</h3>
+            <p class="article-text">
+              Explains how “Saami Salami” appears in documents and links this spelling back to the single founder
+              identity behind Elisence.
+            </p>
+            <a class="article-link" href="saami-salami.html">Open saami-salami.html →</a>
+          </article>
+
+          <!-- Sami spelling -->
+          <article class="article-card">
+            <div class="article-eyebrow">Name mapping</div>
+            <h3 class="article-title">“Sami Salami” – founder reference</h3>
+            <p class="article-text">
+              Clarifies that “Sami Salami” is the same person as Saami Salami Asl, preventing search or legal confusion.
+            </p>
+            <a class="article-link" href="sami-salami.html">Open sami-salami.html →</a>
+          </article>
+
+          <!-- Full surname -->
+          <article class="article-card">
+            <div class="article-eyebrow">Name mapping</div>
+            <h3 class="article-title">“Saami / Sami Salami Asl” – full surname</h3>
+            <p class="article-text">
+              Shows how “Asl” appears in formal contexts, and ties all spellings back to one legal and professional identity.
+            </p>
+            <a class="article-link" href="sami-salami-asl.html">Open sami-salami-asl.html →</a>
+          </article>
+
+          <!-- UK specific -->
+          <article class="article-card">
+            <div class="article-eyebrow">Jurisdiction</div>
+            <h3 class="article-title">Sami Salami – UK professional profile</h3>
+            <p class="article-text">
+              UK-centred profile for courts, regulators and employers who need a focused view on work done in the UK.
+            </p>
+            <a class="article-link" href="sami-salami-uk.html">Open sami-salami-uk.html →</a>
+          </article>
+
+          <!-- BBVP -->
+          <article class="article-card">
+            <div class="article-eyebrow">Methodology</div>
+            <h3 class="article-title">BBVP methodology – build, verify, prove</h3>
+            <p class="article-text">
+              High-level explanation of the BBVP safety methodology used across Elisence: no feature is “done” without tests,
+              evidence and traceability.
+            </p>
+            <a class="article-link" href="bbvp-methodology.html">Open bbvp-methodology.html →</a>
+          </article>
+
+          <!-- NHS -->
+          <article class="article-card">
+            <div class="article-eyebrow">Regulation</div>
+            <h3 class="article-title">NHS digital safety alignment</h3>
+            <p class="article-text">
+              Shows how Elisence aligns to NHS-style clinical safety expectations without acting as a medical device.
+            </p>
+            <a class="article-link" href="nhs-digital-safety.html">Open nhs-digital-safety.html →</a>
+          </article>
+
+          <!-- EU MDR (note: filename uses “dighital” in repo) -->
+          <article class="article-card">
+            <div class="article-eyebrow">Regulation</div>
+            <h3 class="article-title">EU MDR – digital health posture</h3>
+            <p class="article-text">
+              Positions Elisence next to EU MDR and CDS guidance: educational, decision-support style, not diagnostic or prescriptive.
+            </p>
+            <a class="article-link" href="eu-mdr-dighital-health.html">Open eu-mdr-dighital-health.html →</a>
+          </article>
+
+          <!-- FDA -->
+          <article class="article-card">
+            <div class="article-eyebrow">Regulation</div>
+            <h3 class="article-title">FDA-compatible digital health stance</h3>
+            <p class="article-text">
+              Explains how Elisence can operate safely around US FDA expectations as a non-SaMD, non-prescriptive intelligence layer.
+            </p>
+            <a class="article-link" href="fda-digital-health.html">Open fda-digital-health.html →</a>
+          </article>
+
+          <!-- GCC -->
+          <article class="article-card">
+            <div class="article-eyebrow">Region</div>
+            <h3 class="article-title">GCC digital health & PDPL alignment</h3>
+            <p class="article-text">
+              Describes Elisence’s fit with GCC ministries, PDPL-style privacy rules and national digital health strategies.
+            </p>
+            <a class="article-link" href="gcc-digital-health.html">Open gcc-digital-health.html →</a>
+          </article>
+
+          <!-- Zero trust -->
+          <article class="article-card">
+            <div class="article-eyebrow">Security</div>
+            <h3 class="article-title">Zero-trust & security posture</h3>
+            <p class="article-text">
+              Overview of zero-trust, K-anonymity and WORM-style evidence needed for ministries, hospitals and legal reviews.
+            </p>
+            <a class="article-link" href="zero-trust-security.html">Open zero-trust-security.html →</a>
+          </article>
         </div>
       </section>
     </main>
