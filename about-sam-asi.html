@@ -2,76 +2,84 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>BBVP – Build, Back, Verify, Prove – Elisence Methodology</title>
-  <meta name="author" content="Elisence Research Team" />
+  <title>About Sam Asi – Founder of Elisence | UK View</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="How Elisence uses the BBVP approach – Build, Back, Verify, Prove – to develop digital health with evidence, testing, and traceable trust." />
-  <meta name="keywords" content="BBVP, Build Back Verify Prove, Elisence, evidence-based development, digital health testing, health intelligence" />
-  <link rel="canonical" href="https://elisence.co.uk/bbvp-methodology.html" />
+  <meta name="description" content="A calm, UK-facing introduction to Sam Asi, founder of the Elisence digital health platform – focusing on values, long-term vision and public benefit.">
+  <meta name="keywords" content="Sam Asi, Elisence founder, UK digital health, health AI, NHS aligned thinking">
+  <link rel="canonical" href="https://elisence.com/founder.html" />
 
   <!-- Open Graph -->
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="BBVP – Build, Back, Verify, Prove – Elisence Methodology" />
-  <meta property="og:description" content="Overview of the BBVP method Elisence uses to build step by step with tests, evidence packs, and transparent proof." />
-  <meta property="og:url" content="https://elisence.co.uk/bbvp-methodology.html" />
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="About Sam Asi – Founder of Elisence" />
+  <meta property="og:description" content="Learn more about the person behind the Elisence platform: Sam Asi, a UK-based digital health founder focused on long-term, ethical health technology." />
+  <meta property="og:url" content="https://elisence.co.uk/about-sam-asi.html" />
   <meta property="og:site_name" content="Elisence UK" />
 
-  <!-- JSON-LD -->
+  <!-- JSON-LD Person Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "BBVP – Build, Back, Verify, Prove – Elisence Methodology",
-    "author": {
+    "@type": "Person",
+    "name": "Sam Asi",
+    "jobTitle": "Founder of Elisence",
+    "url": "https://elisence.com/founder.html",
+    "affiliation": {
       "@type": "Organization",
-      "name": "Elisence",
-      "url": "https://elisence.com"
+      "name": "Elisence"
     },
-    "about": [
-      "BBVP methodology",
-      "evidence-based development",
-      "digital health testing",
-      "regulatory-grade proof"
-    ],
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://elisence.co.uk/bbvp-methodology.html"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Elisence",
-      "url": "https://elisence.com"
-    }
+    "nationality": "United Kingdom",
+    "knowsAbout": [
+      "Digital health",
+      "Clinical safety",
+      "Health data governance",
+      "AI ethics",
+      "Public health systems"
+    ]
   }
   </script>
 
   <style>
     :root {
       --bg: #020617;
+      --bg-alt: #02091a;
       --card: #0b1220;
+      --card-soft: #020617;
       --border-soft: rgba(148, 163, 184, 0.15);
       --accent: #38bdf8;
+      --accent-soft: rgba(56, 189, 248, 0.16);
       --text-main: #e5e7eb;
       --text-soft: #9ca3af;
       --text-strong: #f9fafb;
       --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.9);
+      --radius-lg: 18px;
       --radius-full: 999px;
       --transition-fast: 180ms ease-out;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { height: 100%; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+    }
 
     body {
-      font-family: system-ui, -apple-system, "SF Pro Text", "Segoe UI", sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+        "Segoe UI", sans-serif;
       background: radial-gradient(circle at top, #020617 0, #020617 45%, #020617 100%);
       color: var(--text-main);
       -webkit-font-smoothing: antialiased;
     }
 
-    .page-shell { min-height: 100vh; display: flex; flex-direction: column; }
+    .page-shell {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
 
-    /* Top bar */
     .top-bar {
       position: sticky;
       top: 0;
@@ -80,20 +88,23 @@
       background: linear-gradient(to right, #020617d9, #020617e6);
       border-bottom: 1px solid rgba(15, 23, 42, 0.9);
     }
+
     .top-bar-inner {
       max-width: 1100px;
       margin: 0 auto;
       padding: 12px 16px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       gap: 12px;
     }
+
     .brand {
       display: flex;
       align-items: center;
       gap: 10px;
     }
+
     .brand-mark {
       width: 30px;
       height: 30px;
@@ -103,13 +114,15 @@
         0 0 22px rgba(56, 189, 248, 0.55),
         0 0 40px rgba(15, 23, 42, 0.9);
     }
+
     .brand-text-main {
-      font-size: 15px;
       font-weight: 600;
-      text-transform: uppercase;
+      font-size: 15px;
       letter-spacing: 0.1em;
+      text-transform: uppercase;
       color: var(--text-strong);
     }
+
     .brand-text-sub {
       font-size: 11px;
       text-transform: uppercase;
@@ -117,12 +130,14 @@
       color: #38bdf8;
       opacity: 0.85;
     }
+
     .nav-links {
       display: flex;
       align-items: center;
       gap: 8px;
       font-size: 13px;
     }
+
     .nav-link {
       border-radius: var(--radius-full);
       padding: 6px 11px;
@@ -131,11 +146,13 @@
       text-decoration: none;
       transition: var(--transition-fast);
     }
+
     .nav-link:hover {
       border-color: rgba(148, 163, 184, 0.4);
       color: var(--text-main);
       background: rgba(15, 23, 42, 0.95);
     }
+
     .nav-link-primary {
       border-radius: var(--radius-full);
       padding: 7px 14px;
@@ -150,6 +167,7 @@
       transition: var(--transition-fast);
       white-space: nowrap;
     }
+
     .nav-link-primary:hover {
       transform: translateY(-1px);
       box-shadow:
@@ -157,7 +175,9 @@
         0 22px 50px rgba(15, 23, 42, 1);
     }
 
-    main { flex: 1; }
+    main {
+      flex: 1;
+    }
 
     .content {
       max-width: 1100px;
@@ -167,8 +187,11 @@
       grid-template-columns: minmax(0, 1.7fr) minmax(0, 1.3fr);
       gap: 20px;
     }
+
     @media (max-width: 860px) {
-      .content { grid-template-columns: minmax(0, 1fr); }
+      .content {
+        grid-template-columns: minmax(0, 1fr);
+      }
     }
 
     .hero-card {
@@ -177,18 +200,22 @@
       padding: 26px 22px 22px;
       border: 1px solid rgba(148, 163, 184, 0.25);
       box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
     }
+
     .hero-pill {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      border-radius: var(--radius-full);
+      border-radius: 999px;
       padding: 4px 11px 4px 4px;
       background: rgba(15, 23, 42, 0.9);
       border: 1px solid rgba(56, 189, 248, 0.35);
       box-shadow: 0 0 18px rgba(56, 189, 248, 0.45);
       margin-bottom: 14px;
     }
+
     .hero-pill-dot {
       width: 18px;
       height: 18px;
@@ -198,12 +225,14 @@
         0 0 20px rgba(56, 189, 248, 0.7),
         0 0 40px rgba(15, 23, 42, 1);
     }
+
     .hero-pill-text {
       font-size: 11px;
       text-transform: uppercase;
       letter-spacing: 0.15em;
       color: #e0f2fe;
     }
+
     .hero-kicker {
       font-size: 12px;
       letter-spacing: 0.18em;
@@ -211,12 +240,14 @@
       color: #60a5fa;
       margin-bottom: 10px;
     }
+
     .hero-title {
       font-size: clamp(26px, 4vw, 30px);
       line-height: 1.2;
       color: var(--text-strong);
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
+
     .hero-subtitle {
       font-size: 14px;
       line-height: 1.6;
@@ -224,19 +255,74 @@
       max-width: 36rem;
       margin-bottom: 18px;
     }
+
     .hero-meta {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
       margin-bottom: 18px;
     }
+
     .meta-chip {
       font-size: 11px;
       padding: 5px 10px;
-      border-radius: var(--radius-full);
+      border-radius: 999px;
       border: 1px solid rgba(148, 163, 184, 0.4);
       background: rgba(15, 23, 42, 0.85);
+      color: #e5e7eb;
     }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .btn-primary {
+      border-radius: var(--radius-full);
+      padding: 9px 14px;
+      font-size: 13px;
+      font-weight: 500;
+      background: radial-gradient(circle at 20% 0, #38bdf8, #0ea5e9 40%, #0369a1 100%);
+      border: 1px solid rgba(56, 189, 248, 0.8);
+      color: #0b1120;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow:
+        0 0 18px rgba(56, 189, 248, 0.55),
+        0 18px 40px rgba(15, 23, 42, 0.95);
+      transition: var(--transition-fast);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow:
+        0 0 24px rgba(56, 189, 248, 0.7),
+        0 22px 52px rgba(15, 23, 42, 1);
+    }
+
+    .btn-ghost {
+      border-radius: var(--radius-full);
+      padding: 8px 14px;
+      font-size: 13px;
+      text-decoration: none;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      color: var(--text-main);
+      background: rgba(15, 23, 42, 0.9);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: var(--transition-fast);
+    }
+
+    .btn-ghost:hover {
+      background: rgba(15, 23, 42, 1);
+      border-color: rgba(148, 163, 184, 0.8);
+    }
+
     .hero-footnote {
       margin-top: 6px;
       font-size: 11px;
@@ -248,19 +334,22 @@
       flex-direction: column;
       gap: 14px;
     }
+
     .card {
       background: radial-gradient(circle at top left, #020617 0, #020617 45%, #020617 100%);
       border-radius: 20px;
-      padding: 16px;
+      padding: 16px 16px 14px;
       border: 1px solid var(--border-soft);
       box-shadow: var(--shadow-soft);
     }
+
     .card-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 8px;
     }
+
     .card-title {
       font-size: 13px;
       font-weight: 600;
@@ -268,21 +357,24 @@
       letter-spacing: 0.16em;
       color: #cbd5f5;
     }
+
     .card-badge {
       font-size: 10px;
       padding: 3px 8px;
-      border-radius: var(--radius-full);
+      border-radius: 999px;
       border: 1px solid rgba(56, 189, 248, 0.4);
       background: rgba(15, 23, 42, 0.95);
       color: #e0f2fe;
       text-transform: uppercase;
       letter-spacing: 0.14em;
     }
+
     .card-body {
       font-size: 13px;
       line-height: 1.7;
       color: var(--text-soft);
     }
+
     .card-list {
       margin-top: 8px;
       display: grid;
@@ -290,6 +382,7 @@
       font-size: 13px;
       color: var(--text-soft);
     }
+
     .card-list strong {
       color: var(--text-main);
       font-weight: 500;
@@ -302,6 +395,7 @@
       padding-bottom: 1px;
       transition: var(--transition-fast);
     }
+
     .inline-link:hover {
       color: #e0f2fe;
       border-color: rgba(125, 211, 252, 0.8);
@@ -311,6 +405,7 @@
       border-top: 1px solid rgba(15, 23, 42, 0.9);
       background: #020617;
     }
+
     .footer-inner {
       max-width: 1100px;
       margin: 0 auto;
@@ -323,11 +418,13 @@
       gap: 8px;
       opacity: 0.9;
     }
+
     .footer-links {
       display: flex;
       gap: 10px;
       flex-wrap: wrap;
     }
+
     .footer-link {
       color: var(--text-soft);
       text-decoration: none;
@@ -335,13 +432,13 @@
       padding-bottom: 1px;
       transition: var(--transition-fast);
     }
+
     .footer-link:hover {
       color: var(--text-main);
       border-bottom-style: solid;
     }
   </style>
 </head>
-
 <body>
   <div class="page-shell">
     <!-- Top bar -->
@@ -351,7 +448,7 @@
           <div class="brand-mark"></div>
           <div>
             <div class="brand-text-main">Elisence UK</div>
-            <div class="brand-text-sub">BBVP Methodology</div>
+            <div class="brand-text-sub">Sovereign Digital Health</div>
           </div>
         </div>
         <nav class="nav-links">
@@ -360,7 +457,7 @@
           <a class="nav-link" href="/sam-asi.html">Sam Asi</a>
           <a class="nav-link" href="/about-sam-asi.html">About the founder</a>
           <a class="nav-link-primary" href="https://www.elisence.com" target="_blank" rel="noopener">
-            Main Platform
+            Go to main platform
           </a>
         </nav>
       </div>
@@ -368,147 +465,146 @@
 
     <main>
       <section class="content">
-        <!-- Left column: hero -->
+        <!-- Left column: main narrative -->
         <article class="hero-card">
           <div class="hero-pill">
             <span class="hero-pill-dot"></span>
-            <span class="hero-pill-text">BBVP · Evidence · Trust</span>
+            <span class="hero-pill-text">About · Founder</span>
           </div>
 
-          <div class="hero-kicker">Elisence Research Team · Elisence</div>
+          <div class="hero-kicker">Sam Asi · Founder of Elisence</div>
 
           <h1 class="hero-title">
-            How Elisence Research Team uses BBVP to build Elisence with evidence and proof
+            A quiet, long-term approach to digital health and public good
           </h1>
 
           <p class="hero-subtitle">
-            BBVP stands for <strong>Build, Back, Verify, Prove</strong>. It is the way <strong>Sam Asi</strong>
-            develops Elisence: not just by writing code or documents, but by backing every step with tests, evidence
-            packs and clear proof of what works.
+            This page offers a calm introduction to <strong>Sam Asi</strong>, the founder of
+            <strong>Elisence</strong>. Rather than focusing on noise or headlines, it focuses on the values,
+            patience and long-term thinking behind the work.
           </p>
 
           <div class="hero-meta">
-            <span class="meta-chip">Build with intention</span>
-            <span class="meta-chip">Back with tests</span>
-            <span class="meta-chip">Verify behaviour</span>
-            <span class="meta-chip">Prove with evidence</span>
+            <span class="meta-chip">Digital health &amp; governance</span>
+            <span class="meta-chip">Human-centred design</span>
+            <span class="meta-chip">UK &amp; international context</span>
+          </div>
+
+          <div class="hero-actions">
+            <a class="btn-primary" href="https://elisence.com/founder.html" target="_blank" rel="noopener">
+              View full founder page on Elisence.com
+            </a>
+            <a class="btn-ghost" href="https://www.elisence.com/phases.html" target="_blank" rel="noopener">
+              Explore the 17 Elisence phases
+            </a>
           </div>
 
           <p class="hero-footnote">
-            This is not a legal framework. It is a practical, personal engineering discipline for digital health.
+            This UK microsite is for context only. It does not discuss personal legal matters and does not provide
+            medical advice or diagnosis.
           </p>
         </article>
 
         <!-- Right column: cards -->
         <div class="grid-col">
-          <!-- Card 1: Build -->
           <section class="card">
             <div class="card-header">
-              <h2 class="card-title">1 · Build</h2>
-              <span class="card-badge">Design</span>
+              <h2 class="card-title">Background &amp; orientation</h2>
+              <span class="card-badge">Context</span>
             </div>
             <div class="card-body">
               <p>
-                In Elisence, “Build” means creating features, documents and flows with a clear purpose. Nothing is
-                random or rushed:
+                Sam Asi’s work sits at the intersection of digital health, regulatory thinking and everyday life.
+                The aim is not to build another attention-hungry app, but to design a platform that families,
+                clinicians and ministries of health could eventually trust and understand.
               </p>
               <div class="card-list">
-                <div><strong>Clear scope:</strong> Each feature has a defined role and boundary.</div>
-                <div><strong>Simple UX:</strong> Normal people should be able to use it calmly.</div>
-                <div><strong>Respect:</strong> Design respects families, clinicians and ministries equally.</div>
+                <div><strong>Focus:</strong> Preventive health, calm technology and clear boundaries with medicine.</div>
+                <div><strong>Lens:</strong> UK and European clinical safety expectations, together with Gulf-region realities.</div>
+                <div><strong>Method:</strong> Writing everything as if it will be reviewed by independent experts.</div>
               </div>
             </div>
           </section>
 
-          <!-- Card 2: Back -->
           <section class="card">
             <div class="card-header">
-              <h2 class="card-title">2 · Back</h2>
-              <span class="card-badge">Support</span>
+              <h2 class="card-title">Elisence as a platform</h2>
+              <span class="card-badge">Vision</span>
             </div>
             <div class="card-body">
               <p>
-                “Back” means every important change is supported by something solid behind it:
+                Elisence is being designed as a long-term “health and humanity” infrastructure: one that can
+                support families with daily habits while also giving ministries and hospitals a structured,
+                regulator-friendly view of what is happening on the ground.
               </p>
               <div class="card-list">
-                <div><strong>Notes & rationale:</strong> Why this change exists is written down.</div>
-                <div><strong>Standards:</strong> Links to NHS, EU, GCC or other guidance where relevant.</div>
-                <div><strong>Structure:</strong> Code and content follow repeatable patterns, not chaos.</div>
+                <div><strong>Phases:</strong> From GLP-1 and metabolic support to women’s health, nutrition, mental wellbeing and more.</div>
+                <div><strong>Controls:</strong> Every major feature can be switched on or off using policy and evidence, not marketing.</div>
+                <div><strong>Boundary:</strong> Clear non-diagnostic, non-prescriptive positioning – to respect doctors, not replace them.</div>
               </div>
             </div>
           </section>
 
-          <!-- Card 3: Verify -->
           <section class="card">
             <div class="card-header">
-              <h2 class="card-title">3 · Verify</h2>
-              <span class="card-badge">Testing</span>
+              <h2 class="card-title">Values &amp; personal approach</h2>
+              <span class="card-badge">Principles</span>
             </div>
             <div class="card-body">
               <p>
-                “Verify” is where ideas and code are actually checked. For Elisence, this includes:
+                The personal approach behind Elisence is deliberately quiet: to build slowly, document carefully
+                and keep the work grounded in empathy – especially for children, families and people who feel
+                overwhelmed by modern systems.
               </p>
               <div class="card-list">
-                <div><strong>Technical tests:</strong> Does the code run? Do endpoints behave as expected?</div>
-                <div><strong>Safety checks:</strong> Does the system stay non-diagnostic and inside safe limits?</div>
-                <div><strong>Consistency:</strong> Do results match the standards they claim to follow?</div>
+                <div><strong>Dignity:</strong> Health technology should never treat people as data points alone.</div>
+                <div><strong>Transparency:</strong> Decisions should be explainable in simple language, not hidden behind jargon.</div>
+                <div><strong>Patience:</strong> It is better to move slower and be safe than to move quickly and break trust.</div>
               </div>
             </div>
           </section>
 
-          <!-- Card 4: Prove -->
           <section class="card">
             <div class="card-header">
-              <h2 class="card-title">4 · Prove</h2>
-              <span class="card-badge">Evidence</span>
+              <h2 class="card-title">Where to find official information</h2>
+              <span class="card-badge">Links</span>
             </div>
             <div class="card-body">
               <p>
-                “Prove” is where everything is recorded so it can be shown later to ministries, investors or auditors:
-              </p>
-              <div class="card-list">
-                <div><strong>Evidence packs:</strong> Bundles of tests, screenshots and logs kept together.</div>
-                <div><strong>Versioning:</strong> Clear dates and versions so people know what they are looking at.</div>
-                <div><strong>Honesty:</strong> If something is not finished, it is marked as “not done”, not hidden.</div>
-              </div>
-            </div>
-          </section>
-
-          <!-- Card 5: Why this matters -->
-          <section class="card">
-            <div class="card-header">
-              <h2 class="card-title">Why BBVP matters in Elisence</h2>
-              <span class="card-badge">Trust</span>
-            </div>
-            <div class="card-body">
-              <p>
-                For a platform that aims to support ministries, hospitals and families, trust cannot be just words.
-                BBVP is the way <strong>Sam Asi</strong> turns that into daily practice—step by step, with proof.
+                For anyone who wants a more structured or technical description, the main Elisence site remains
+                the single source of truth:
               </p>
               <div class="card-list">
                 <div>
-                  <a class="inline-link" href="https://www.elisence.com/phases.html" target="_blank" rel="noopener">
-                    Explore how BBVP shapes each phase of Elisence
-                  </a>
-                </div>
-                <div>
+                  <strong>Founder profile:</strong>
                   <a class="inline-link" href="https://elisence.com/founder.html" target="_blank" rel="noopener">
-                    Founder story – Sam Asi
+                    Official founder page on Elisence.com
+                  </a>
+                </div>
+                <div>
+                  <strong>Platform structure:</strong>
+                  <a class="inline-link" href="https://www.elisence.com/phases.html" target="_blank" rel="noopener">
+                    Overview of all 17 phases
+                  </a>
+                </div>
+                <div>
+                  <strong>Videos:</strong>
+                  <a class="inline-link" href="https://www.elisence.com/video.html" target="_blank" rel="noopener">
+                    Official Elisence video library
                   </a>
                 </div>
               </div>
             </div>
           </section>
-
         </div>
       </section>
     </main>
 
     <footer>
       <div class="footer-inner">
-        <div>© Elisence UK microsite – BBVP methodology overview for Elisence.</div>
+        <div>© Elisence UK microsite – contextual “About Sam Asi” page. No medical advice is provided here.</div>
         <div class="footer-links">
-          <a class="footer-link" href="https://www.elisence.com" target="_blank" rel="noopener">Main platform</a>
+          <a class="footer-link" href="https://www.elisence.com" target="_blank" rel="noopener">Main Elisence platform</a>
           <a class="footer-link" href="/index.html">UK home</a>
         </div>
       </div>
